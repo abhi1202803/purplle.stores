@@ -1,0 +1,37 @@
+FROM python:3.11-slim
+
+# Install system dependencies for ffmpeg and opencv-python-headless
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Pre-download YOLO weights during build
+RUN python -c "from ultralytics import YOLO; YOLO('yolo11n.pt')"
+
+# Copy application directories and startup script
+COPY app /app/app
+COPY config /app/config
+COPY data /app/data
+COPY start_combined.sh /app/start_combined.sh
+
+# Create output folders and grant script execution permissions
+RUN mkdir -p /app/outputs/heatmaps && chmod +x /app/start_combined.sh
+
+# Expose ports (8000 for FastAPI, 8501 for Streamlit)
+EXPOSE 8000
+EXPOSE 8501
+
+# Set the environment variable to configure the FastAPI client URL locally
+ENV API_URL=http://localhost:8000
+
+# Default runtime command running start_combined.sh
+CMD ["/bin/bash", "/app/start_combined.sh"]

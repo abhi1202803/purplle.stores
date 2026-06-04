@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: purplle-store-intelligence
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: API_URL
+        value: http://localhost:8000
