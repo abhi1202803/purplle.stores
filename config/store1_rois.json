@@ -1,0 +1,252 @@
+{
+    "CAM 1 - zone": {
+        "name": "CAM 1 - Zone Monitoring",
+        "width": 1920,
+        "height": 1080,
+        "homography": [
+            [
+                0.33854166666666674,
+                0.0,
+                49.99999999999993
+            ],
+            [
+                0.0,
+                0.32407407407407424,
+                49.99999999999993
+            ],
+            [
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "rois": {
+            "shelf_left": {
+                "name": "Left Shelf",
+                "type": "SHELF",
+                "polygon": [
+                    [
+                        50,
+                        200
+                    ],
+                    [
+                        400,
+                        200
+                    ],
+                    [
+                        400,
+                        900
+                    ],
+                    [
+                        50,
+                        900
+                    ]
+                ]
+            },
+            "shelf_center": {
+                "name": "Center Display",
+                "type": "SHELF",
+                "polygon": [
+                    [
+                        600,
+                        300
+                    ],
+                    [
+                        1300,
+                        300
+                    ],
+                    [
+                        1300,
+                        800
+                    ],
+                    [
+                        600,
+                        800
+                    ]
+                ]
+            }
+        }
+    },
+    "CAM 2 - zone": {
+        "name": "CAM 2 - Zone Monitoring",
+        "width": 1920,
+        "height": 1080,
+        "homography": [
+            [
+                0.35416666666666674,
+                0.0,
+                799.9999999999999
+            ],
+            [
+                0.0,
+                0.32407407407407424,
+                49.99999999999993
+            ],
+            [
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "rois": {
+            "shelf_right": {
+                "name": "Right Shelf",
+                "type": "SHELF",
+                "polygon": [
+                    [
+                        1400,
+                        200
+                    ],
+                    [
+                        1850,
+                        200
+                    ],
+                    [
+                        1850,
+                        900
+                    ],
+                    [
+                        1400,
+                        900
+                    ]
+                ]
+            },
+            "lipstick_aisle": {
+                "name": "Lipstick Aisle",
+                "type": "SHELF",
+                "polygon": [
+                    [
+                        500,
+                        100
+                    ],
+                    [
+                        1200,
+                        100
+                    ],
+                    [
+                        1200,
+                        400
+                    ],
+                    [
+                        500,
+                        400
+                    ]
+                ]
+            }
+        }
+    },
+    "CAM 3 - entry": {
+        "name": "CAM 3 - Entry Monitoring",
+        "width": 1920,
+        "height": 1080,
+        "homography": [
+            [
+                0.20833333333333337,
+                0.0,
+                99.99999999999999
+            ],
+            [
+                0.0,
+                0.23148148148148162,
+                500.0
+            ],
+            [
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "rois": {
+            "entry_zone": {
+                "name": "Entry Zone",
+                "type": "ENTRY",
+                "polygon": [
+                    [
+                        100,
+                        400
+                    ],
+                    [
+                        1800,
+                        400
+                    ],
+                    [
+                        1800,
+                        1070
+                    ],
+                    [
+                        100,
+                        1070
+                    ]
+                ]
+            }
+        }
+    },
+    "CAM 5 - billing": {
+        "name": "CAM 5 - Billing Counter Monitoring",
+        "width": 1920,
+        "height": 1080,
+        "homography": [
+            [
+                0.31250000000000006,
+                0.0,
+                799.9999999999999
+            ],
+            [
+                0.0,
+                0.23148148148148162,
+                500.0
+            ],
+            [
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "rois": {
+            "billing_queue_wait": {
+                "name": "Billing Counter Queue",
+                "type": "BILLING_WAIT",
+                "polygon": [
+                    [
+                        300,
+                        450
+                    ],
+                    [
+                        1200,
+                        450
+                    ],
+                    [
+                        1200,
+                        950
+                    ],
+                    [
+                        300,
+                        950
+                    ]
+                ]
+            },
+            "billing_queue_desk": {
+                "name": "Billing Counter Desk",
+                "type": "BILLING_DESK",
+                "polygon": [
+                    [
+                        300,
+                        100
+                    ],
+                    [
+                        1200,
+                        100
+                    ],
+                    [
+                        1200,
+                        440
+                    ],
+                    [
+                        300,
+                        440
+                    ]
+                ]
+            }
+        }
+    }
+}
