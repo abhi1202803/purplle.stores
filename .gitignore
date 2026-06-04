@@ -1,0 +1,44 @@
+# Python Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python Cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases
+*.db
+*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Local build / docker outputs
+outputs/heatmaps/*.png
+runs/
+yolo11n.pt
+
+# Large video assets
+*.mp4
+*.avi
+*.mkv
+
+# Build artifacts
+submission.zip
+
+# Temporary logs and URLs
+outputs/*.log
+outputs/*.txt
+
